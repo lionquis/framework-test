@@ -1,0 +1,147 @@
+// ...existing code...
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sample Form Page</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 2rem; }
+    form { max-width: 640px; margin: 0 auto; gap: 0.75rem; display: grid; }
+    label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input, textarea, select { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    .row { display: flex; gap: 1rem; }
+    .row > * { flex: 1 1 0; }
+    .controls { display:flex; gap:0.5rem; }
+    .hint { font-size: 0.9rem; color:#555; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Contact / Demo Form</h1>
+    <p class="hint">Fill out the form and press Submit. This is a valid HTML5 form example.</p>
+
+    <form id="demo-form" action="/submit" method="post" enctype="multipart/form-data" novalidate>
+      <div class="row">
+        <div>
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" required minlength="2" placeholder="Jane Doe" />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" max="120" />
+        </div>
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+      <label for="reason">Reason for contact</label>
+      <select id="reason" name="reason" required>
+        <option value="">-- choose one --</option>
+        <option>Support</option>
+        <option>Sales</option>
+        <option>Feedback</option>
+        <option>Other</option>
+      </select>
+
+      <fieldset>
+        <legend>Preferred contact method</legend>
+        <label><input type="radio" name="contactMethod" value="email" checked /> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone" /> Phone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests (optional)</legend>
+        <label><input type="checkbox" name="interests" value="news" /> Newsletter</label>
+        <label><input type="checkbox" name="interests" value="updates" /> Product updates</label>
+      </fieldset>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+      <label for="attachment">Attachment (optional)</label>
+      <input id="attachment" name="attachment" type="file" accept=".png,.jpg,.jpeg,.pdf" />
+
+      <div class="controls">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
+```// filepath: /workspaces/framework-test/index.html
+// ...existing code...
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sample Form Page</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 2rem; }
+    form { max-width: 640px; margin: 0 auto; gap: 0.75rem; display: grid; }
+    label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input, textarea, select { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    .row { display: flex; gap: 1rem; }
+    .row > * { flex: 1 1 0; }
+    .controls { display:flex; gap:0.5rem; }
+    .hint { font-size: 0.9rem; color:#555; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Contact / Demo Form</h1>
+    <p class="hint">Fill out the form and press Submit. This is a valid HTML5 form example.</p>
+
+    <form id="demo-form" action="/submit" method="post" enctype="multipart/form-data" novalidate>
+      <div class="row">
+        <div>
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" required minlength="2" placeholder="Jane Doe" />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" max="120" />
+        </div>
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+      <label for="reason">Reason for contact</label>
+      <select id="reason" name="reason" required>
+        <option value="">-- choose one --</option>
+        <option>Support</option>
+        <option>Sales</option>
+        <option>Feedback</option>
+        <option>Other</option>
+      </select>
+
+      <fieldset>
+        <legend>Preferred contact method</legend>
+        <label><input type="radio" name="contactMethod" value="email" checked /> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone" /> Phone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests (optional)</legend>
+        <label><input type="checkbox" name="interests" value="news" /> Newsletter</label>
+        <label><input type="checkbox" name="interests" value="updates" /> Product updates</label>
+      </fieldset>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+      <label for="attachment">Attachment (optional)</label>
+      <input id="attachment" name="attachment" type="file" accept=".png,.jpg,.jpeg,.pdf" />
+
+      <div class="controls">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
