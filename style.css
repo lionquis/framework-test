@@ -1,0 +1,331 @@
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1e40af;
+  --border: #e6e9ef;
+  --danger: #dc2626;
+  --shadow: 0 8px 30px rgba(13, 18, 31, 0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+  color:var(--text);
+  padding:2.5rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+main{
+  max-width:900px;
+  margin:0 auto;
+}
+
+/* Form card */
+form#demo-form{
+  background:var(--card);
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  display:grid;
+  gap:0.9rem;
+}
+
+/* Headings / hints */
+h1{
+  margin:0 0 0.25rem 0;
+  font-size:1.4rem;
+  font-weight:700;
+}
+.hint{
+  margin:0 0 0.75rem 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* Layout */
+.row{ display:flex; gap:0.75rem; }
+.row > *{ flex:1 1 0 }
+
+/* Labels and controls */
+label{ display:block; margin-bottom:0.35rem; font-weight:600; color:var(--text); font-size:0.95rem; }
+input, textarea, select{
+  width:100%;
+  padding:0.6rem 0.75rem;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+  color:var(--text);
+  transition:box-shadow 180ms ease, border-color 180ms ease, transform 120ms ease;
+  font-size:0.95rem;
+  outline:none;
+}
+
+/* Focus */
+input:focus, textarea:focus, select:focus{
+  border-color:var(--accent-600);
+  box-shadow:0 6px 20px rgba(37,99,235,0.08);
+  transform:translateY(-1px);
+}
+
+/* Validation hint (visual only) */
+input:invalid, textarea:invalid, select:invalid{
+  border-color:var(--danger);
+  box-shadow:0 6px 20px rgba(220,38,38,0.06);
+}
+
+/* Fieldset styling */
+fieldset{
+  border:1px solid var(--border);
+  padding:0.65rem 0.85rem;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(250,251,255,0.6), rgba(255,255,255,0.2));
+  margin:0;
+}
+fieldset + fieldset{ margin-top:0.6rem; }
+legend{ padding:0 0.4rem; font-weight:700; color:var(--muted); font-size:0.95rem; }
+
+/* Checkbox / radio label spacing */
+fieldset label{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  margin-right:0.75rem;
+  margin-bottom:0.35rem;
+  font-weight:500;
+  color:var(--text);
+}
+
+/* File input styling */
+input[type="file"]{
+  padding:0;
+}
+input[type="file"]::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  padding:0.45rem 0.7rem;
+  margin-right:0.5rem;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+input[type="file"]::file-selector-button{
+  padding:0.45rem 0.7rem;
+  margin-right:0.5rem;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Buttons */
+.controls{ display:flex; gap:0.6rem; justify-content:flex-end; margin-top:0.25rem; }
+.controls button{
+  padding:0.6rem 0.9rem;
+  border-radius:10px;
+  border:1px solid transparent;
+  font-weight:700;
+  cursor:pointer;
+  font-size:0.95rem;
+  transition:transform 120ms ease, box-shadow 120ms ease;
+}
+.controls button[type="submit"]{
+  background:linear-gradient(180deg, var(--accent), var(--accent-600));
+  color:#fff;
+  box-shadow:0 8px 18px rgba(37,99,235,0.14);
+}
+.controls button[type="submit"]:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(37,99,235,0.18); }
+.controls button[type="reset"]{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid var(--border);
+}
+.controls button[type="reset"]:hover{ transform:translateY(-1px); }
+
+/* Small helpers */
+small.hint, .hint{ font-size:0.9rem; color:var(--muted); }
+
+/* Responsive */
+@media (max-width:720px){
+  body{ padding:1rem; }
+  .row{ flex-direction:column; }
+  .controls{ flex-direction:column-reverse; align-items:stretch; }
+  .controls button{ width:100%; }
+}
+
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1e40af;
+  --border: #e6e9ef;
+  --danger: #dc2626;
+  --shadow: 0 8px 30px rgba(13, 18, 31, 0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+  color:var(--text);
+  padding:2.5rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+main{
+  max-width:900px;
+  margin:0 auto;
+}
+
+/* Form card */
+form#demo-form{
+  background:var(--card);
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  display:grid;
+  gap:0.9rem;
+}
+
+/* Headings / hints */
+h1{
+  margin:0 0 0.25rem 0;
+  font-size:1.4rem;
+  font-weight:700;
+}
+.hint{
+  margin:0 0 0.75rem 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* Layout */
+.row{ display:flex; gap:0.75rem; }
+.row > *{ flex:1 1 0 }
+
+/* Labels and controls */
+label{ display:block; margin-bottom:0.35rem; font-weight:600; color:var(--text); font-size:0.95rem; }
+input, textarea, select{
+  width:100%;
+  padding:0.6rem 0.75rem;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+  color:var(--text);
+  transition:box-shadow 180ms ease, border-color 180ms ease, transform 120ms ease;
+  font-size:0.95rem;
+  outline:none;
+}
+
+/* Focus */
+input:focus, textarea:focus, select:focus{
+  border-color:var(--accent-600);
+  box-shadow:0 6px 20px rgba(37,99,235,0.08);
+  transform:translateY(-1px);
+}
+
+/* Validation hint (visual only) */
+input:invalid, textarea:invalid, select:invalid{
+  border-color:var(--danger);
+  box-shadow:0 6px 20px rgba(220,38,38,0.06);
+}
+
+/* Fieldset styling */
+fieldset{
+  border:1px solid var(--border);
+  padding:0.65rem 0.85rem;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(250,251,255,0.6), rgba(255,255,255,0.2));
+  margin:0;
+}
+fieldset + fieldset{ margin-top:0.6rem; }
+legend{ padding:0 0.4rem; font-weight:700; color:var(--muted); font-size:0.95rem; }
+
+/* Checkbox / radio label spacing */
+fieldset label{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  margin-right:0.75rem;
+  margin-bottom:0.35rem;
+  font-weight:500;
+  color:var(--text);
+}
+
+/* File input styling */
+input[type="file"]{
+  padding:0;
+}
+input[type="file"]::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  padding:0.45rem 0.7rem;
+  margin-right:0.5rem;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+input[type="file"]::file-selector-button{
+  padding:0.45rem 0.7rem;
+  margin-right:0.5rem;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Buttons */
+.controls{ display:flex; gap:0.6rem; justify-content:flex-end; margin-top:0.25rem; }
+.controls button{
+  padding:0.6rem 0.9rem;
+  border-radius:10px;
+  border:1px solid transparent;
+  font-weight:700;
+  cursor:pointer;
+  font-size:0.95rem;
+  transition:transform 120ms ease, box-shadow 120ms ease;
+}
+.controls button[type="submit"]{
+  background:linear-gradient(180deg, var(--accent), var(--accent-600));
+  color:#fff;
+  box-shadow:0 8px 18px rgba(37,99,235,0.14);
+}
+.controls button[type="submit"]:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(37,99,235,0.18); }
+.controls button[type="reset"]{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid var(--border);
+}
+.controls button[type="reset"]:hover{ transform:translateY(-1px); }
+
+/* Small helpers */
+small.hint, .hint{ font-size:0.9rem; color:var(--muted); }
+
+/* Responsive */
+@media (max-width:720px){
+  body{ padding:1rem; }
+  .row{ flex-direction:column; }
+  .controls{ flex-direction:column-reverse; align-items:stretch; }
+  .controls button{ width:100%; }
+}
